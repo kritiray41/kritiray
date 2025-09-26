@@ -1,77 +1,67 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: #f4f4f9;
-  color: #333;
+  padding: 0;
+  background: #f4f4f4;
 }
 
 header {
-  background: #6200ea;
+  background: #333;
   color: white;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
 nav a {
-  margin: 0 15px;
   color: white;
+  margin: 0 10px;
   text-decoration: none;
-  font-weight: bold;
 }
 
 nav a.active {
   border-bottom: 2px solid yellow;
-  color: #ffeb3b;
 }
 
 .container {
+  padding: 20px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 30px;
-}
-
-.profile {
-  width: 220px;
-  border-radius: 50%;
-  margin: 20px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card {
   background: white;
-  border-radius: 15px;
-  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
-  margin: 20px;
   padding: 20px;
-  width: 300px;
-  text-align: center;
-  transition: transform 0.3s ease;
-  opacity: 0;
-}
-
-.card img {
-  width: 100%;
+  margin: 15px;
   border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  width: 60%;
 }
 
-.card:hover {
-  transform: scale(1.05);
+img.profile {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
 }
+
+/* Animation classes */
+.fade-in { opacity: 0; transition: opacity 1s; }
+.fade-in.show { opacity: 1; }
+
+.slide-up { transform: translateY(30px); opacity: 0; transition: all 1s; }
+.slide-up.show { transform: translateY(0); opacity: 1; }
+
+.slide-left { transform: translateX(-30px); opacity: 0; transition: all 1s; }
+.slide-left.show { transform: translateX(0); opacity: 1; }
+
+.slide-right { transform: translateX(30px); opacity: 0; transition: all 1s; }
+.slide-right.show { transform: translateX(0); opacity: 1; }
 
 footer {
-  text-align: center;
-  padding: 15px;
   background: #333;
   color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
 }
-
-/* -------- Animations -------- */
-.fade-in { opacity: 0; transform: translateY(20px); transition: all 1s ease; }
-.slide-up { opacity: 0; transform: translateY(40px); transition: all 1s ease; }
-.slide-left { opacity: 0; transform: translateX(-40px); transition: all 1s ease; }
-.slide-right { opacity: 0; transform: translateX(40px); transition: all 1s ease; }
-
-.show { opacity: 1 !important; transform: translate(0,0) !important; }
