@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <title>My Academics</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -37,5 +37,32 @@
   <footer>
     <p>&copy; 2025 My Website</p>
   </footer>
+
+  <!-- Internal JavaScript (robust active-nav & scroll reveal) -->
+  <script>
+  (function(){
+    const links = document.querySelectorAll('nav a');
+    let path = window.location.pathname;
+    let page = path.substring(path.lastIndexOf('/') + 1);
+    if (!page) page = 'index.html';
+
+    links.forEach(link => {
+      const href = (link.getAttribute('href') || '').replace('./', '');
+      if (href === page) link.classList.add('active');
+    });
+
+    function revealOnScroll() {
+      const elements = document.querySelectorAll('.fade-in, .slide-up, .slide-left, .slide-right');
+      const windowHeight = window.innerHeight;
+      elements.forEach(el => {
+        const pos = el.getBoundingClientRect().top;
+        if (pos < windowHeight - 50) el.classList.add('show');
+      });
+    }
+
+    window.addEventListener('load', revealOnScroll);
+    window.addEventListener('scroll', revealOnScroll);
+  })();
+  </script>
 </body>
 </html>
