@@ -31,13 +31,13 @@
   <!-- Internal JavaScript -->
   <script>
     // Highlight active link
-    let links = document.querySelectorAll("nav a");
-    let currentPage = location.pathname.split("/").pop();
-    links.forEach(link => {
-      if (link.getAttribute("href") === currentPage) {
-        link.classList.add("active");
-      }
-    });
+    let currentPage = location.pathname;
+links.forEach(link => {
+  if (currentPage.endsWith(link.getAttribute("href"))) {
+    link.classList.add("active");
+  }
+});
+
 
     // Scroll animations
     function revealOnScroll() {
