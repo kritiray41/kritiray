@@ -19,31 +19,25 @@
     <img src="images/me.jpg" alt="My Photo" class="profile slide-up">
     <div class="slide-left">
       <h2>About Me</h2>
-      <p>Hello! I am <b>[Your Name]</b>, a student passionate about learning and exploring new things.</p>
+      <p>Hello! I am <b>KRITI RAY</b>, a student passionate about learning and exploring new things.</p>
       <p>I enjoy working on creative projects, studying technology, and building my future career.</p>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 My Website</p>
-  </footer>
-
-  <!-- Internal JavaScript (robust active-nav & scroll reveal) -->
+    <p></p>
+  </footer><p>Made with ❤️ during my Web Development Lab project</p>
   <script>
   (function(){
-    // ------- Highlight active nav link -------
     const links = document.querySelectorAll('nav a');
-    // get last path segment ('' if at repo root like /kritiray/ )
     let path = window.location.pathname;
     let page = path.substring(path.lastIndexOf('/') + 1);
-    if (!page) page = 'index.html'; // treat root as index.html (works on GitHub Pages)
+    if (!page) page = 'index.html'; 
 
     links.forEach(link => {
       const href = (link.getAttribute('href') || '').replace('./', '');
       if (href === page) link.classList.add('active');
     });
-
-    // ------- Simple reveal-on-scroll -------
     function revealOnScroll() {
       const elements = document.querySelectorAll('.fade-in, .slide-up, .slide-left, .slide-right');
       const windowHeight = window.innerHeight;
