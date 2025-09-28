@@ -5,6 +5,7 @@ body {
   padding: 0;
   background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
   color: #333;
+  scroll-behavior: smooth;
 }
 
 /* ===== Header ===== */
@@ -25,13 +26,23 @@ header h1 {
   animation: fadeInDown 1.2s ease;
 }
 
+header p {
+  margin: 5px 0 0 0;
+  font-size: 0.95em;
+  color: #f0f0f0;
+}
+
+nav {
+  margin-top: 10px;
+}
+
 nav a {
   color: white;
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease, transform 0.2s ease;
   font-size: 1.1em;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 nav a:hover {
@@ -44,13 +55,19 @@ nav a.active {
   padding-bottom: 3px;
 }
 
-/* ===== Container ===== */
-.container {
+/* ===== Containers ===== */
+section.container {
   padding: 40px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   animation: fadeInUp 1s ease;
+}
+
+section.container h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #333;
 }
 
 /* ===== Cards ===== */
@@ -84,6 +101,20 @@ img.profile {
 img.profile:hover {
   transform: rotate(5deg) scale(1.05);
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ===== Lists ===== */
+ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  max-width: 700px;
+  margin: auto;
+}
+
+ul li {
+  padding: 8px 0;
+  font-size: 1.1em;
 }
 
 /* ===== Footer ===== */
