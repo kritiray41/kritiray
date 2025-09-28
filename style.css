@@ -6,7 +6,7 @@ body {
   background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
   color: #333;
   scroll-behavior: smooth;
-  text-align: center; /* Centers all text */
+  text-align: center;
 }
 
 /* ===== Header ===== */
@@ -70,14 +70,12 @@ section.container {
   box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
 
-/* Center all section headings */
 section.container h2 {
   margin-bottom: 20px;
   font-size: 2em;
   color: #333;
 }
 
-/* ===== Hero Section ===== */
 .hero {
   padding: 60px 20px;
 }
@@ -106,7 +104,6 @@ section.container h2 {
   background: #00f2fe;
 }
 
-/* ===== Cards ===== */
 .card {
   background: white;
   padding: 25px;
@@ -123,7 +120,6 @@ section.container h2 {
   box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 
-/* ===== Profile Image ===== */
 img.profile {
   width: 220px;
   height: auto;
@@ -139,7 +135,6 @@ img.profile:hover {
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-/* ===== Skills Grid ===== */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -155,7 +150,6 @@ img.profile:hover {
   font-weight: bold;
 }
 
-/* ===== Lists ===== */
 ul {
   list-style: none;
   padding: 0;
@@ -169,7 +163,6 @@ ul li {
   font-size: 1.1em;
 }
 
-/* ===== Footer ===== */
 footer {
   background: linear-gradient(135deg, #764ba2, #667eea);
   color: white;
@@ -180,7 +173,6 @@ footer {
   box-shadow: 0 -3px 8px rgba(0,0,0,0.2);
 }
 
-/* ===== Animations ===== */
 .fade-in { opacity: 0; transition: opacity 1s ease; }
 .fade-in.show { opacity: 1; }
 
@@ -193,7 +185,6 @@ footer {
 .slide-right { transform: translateX(40px); opacity: 0; transition: all 1s ease; }
 .slide-right.show { transform: translateX(0); opacity: 1; }
 
-/* ===== Keyframes ===== */
 @keyframes fadeInDown {
   from { opacity: 0; transform: translateY(-30px); }
   to { opacity: 1; transform: translateY(0); }
