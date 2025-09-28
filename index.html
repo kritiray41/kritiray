@@ -3,23 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>My Personal Website</title>
-  <link rel="stylesheet" href="style.css">
   <style>
-    /* ===== General Styles ===== */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f4f9;
+      background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
       color: #333;
       text-align: center;
     }
 
     header {
-      background: #4facfe;
       background: linear-gradient(to right, #00f2fe, #4facfe);
       color: white;
-      padding: 20px 0;
+      padding: 25px 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 
     nav {
@@ -29,57 +27,85 @@
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 15px;
+      margin: 0 20px;
       font-weight: bold;
+      font-size: 1.1em;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      border-bottom: 2px solid white;
     }
 
     nav a.active {
       border-bottom: 2px solid white;
     }
 
+    section {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+    }
+
     .hero {
       padding: 60px 20px;
       background: white;
+      border-radius: 12px;
+      margin: 40px auto;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
     }
 
-    .hero-content h2 {
+    .hero h2 {
       font-size: 2.5em;
       margin-bottom: 10px;
+      color: #333;
     }
 
-    .hero-content p {
+    .hero p {
       font-size: 1.2em;
       margin-bottom: 20px;
     }
 
     .btn {
       display: inline-block;
-      padding: 10px 20px;
-      background: #4facfe;
+      padding: 12px 25px;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
       color: white;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.3s ease;
     }
 
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    .btn:hover {
+      background: linear-gradient(to right, #00f2fe, #4facfe);
+      transform: translateY(-2px);
     }
 
     .profile {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 20px;
+      border: 4px solid #4facfe;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     h2 {
       margin-bottom: 20px;
+      font-size: 2em;
+      color: #333;
     }
 
     .skills-grid {
@@ -90,12 +116,18 @@
     }
 
     .skill {
-      background: #00f2fe;
       background: linear-gradient(to right, #4facfe, #00f2fe);
       color: white;
       padding: 15px 25px;
-      border-radius: 5px;
+      border-radius: 8px;
       font-weight: bold;
+      font-size: 1em;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .skill:hover {
+      transform: scale(1.05);
     }
 
     footer {
@@ -103,6 +135,7 @@
       color: white;
       padding: 15px 0;
       margin-top: 40px;
+      font-size: 0.9em;
     }
 
     ul {
@@ -111,11 +144,30 @@
     }
 
     ul li {
-      margin: 5px 0;
+      margin: 8px 0;
     }
 
     a {
       color: #4facfe;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -123,7 +175,7 @@
   <header>
     <h1 class="fade-in">Welcome to My Website</h1>
     <nav>
-      <a href="index.html">Personal</a>
+      <a href="index.html" class="active">Personal</a>
       <a href="academic.html">Academic</a>
       <a href="hobby.html">Hobby</a>
     </nav>
@@ -131,22 +183,17 @@
 
   <!-- Hero Section -->
   <section class="hero fade-in">
-    <div class="hero-content">
-      <h2>Hello, I'm <b>KRITI RAY</b></h2>
-      <p>A passionate learner, creative thinker, and aspiring developer.</p>
-      <a href="#about" class="btn">Learn More About Me</a>
-    </div>
+    <h2>Hello, I'm <b>KRITI RAY</b></h2>
+    <p>A passionate learner, creative thinker, and aspiring developer.</p>
+    <a href="#about" class="btn">Learn More About Me</a>
   </section>
 
   <!-- Profile Section -->
-  <section class="container" id="about">
-    <img src="images/me.jpg" alt="My Photo" class="profile slide-up">
-    <div class="slide-left">
-      <h2>About Me</h2>
-      <p>Hello! I am <b>KRITI RAY</b>, a student passionate about learning and exploring new things.</p>
-      <p>I enjoy working on creative projects, studying technology, and building my future career.</p>
-      <p>I believe in continuous learning and love experimenting with new ideas in programming, design, and innovation.</p>
-    </div>
+  <section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <p>Hello! I am <b>KRITI RAY</b>, a student passionate about learning and exploring new things.</p>
+    <p>I enjoy working on creative projects, studying technology, and building my future career.</p>
+    <p>I believe in continuous learning and love experimenting with new ideas in programming, design, and innovation.</p>
   </section>
 
   <!-- Skills Section -->
@@ -157,17 +204,15 @@
       <div class="skill">JavaScript</div>
       <div class="skill">C / C++ Programming</div>
       <div class="skill">Web Development</div>
-      <div class="skill">Problem Solving</div>
-      <div class="skill">Creative Design</div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section class="contact slide-left">
+  <section class="contact fade-in">
     <h2>Contact Me</h2>
     <p>If you'd like to connect, feel free to email me or reach out via my social media profiles.</p>
     <ul>
-      <li>Email: kritiray@example.com</li>
+      <li>Email: kritiray618@gmail.com</li>
       <li>LinkedIn: <a href="https://linkedin.com/in/kritiray" target="_blank">linkedin.com/in/kritiray</a></li>
       <li>GitHub: <a href="https://github.com/kritiray" target="_blank">github.com/kritiray</a></li>
     </ul>
@@ -176,31 +221,5 @@
   <footer>
     <p>© 2025 Kriti Ray</p>
   </footer>
-
-  <script>
-  (function(){
-    const links = document.querySelectorAll('nav a');
-    let path = window.location.pathname;
-    let page = path.substring(path.lastIndexOf('/') + 1);
-    if (!page) page = 'index.html'; 
-
-    links.forEach(link => {
-      const href = (link.getAttribute('href') || '').replace('./', '');
-      if (href === page) link.classList.add('active');
-    });
-
-    function revealOnScroll() {
-      const elements = document.querySelectorAll('.fade-in, .slide-up, .slide-left, .slide-right');
-      const windowHeight = window.innerHeight;
-      elements.forEach(el => {
-        const pos = el.getBoundingClientRect().top;
-        if (pos < windowHeight - 50) el.classList.add('show');
-      });
-    }
-
-    window.addEventListener('load', revealOnScroll);
-    window.addEventListener('scroll', revealOnScroll);
-  })();
-  </script>
 </body>
 </html>
