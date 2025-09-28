@@ -9,9 +9,21 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: linear-gradient(to right, #f8f9fa, #e9f5ff); /* new soft background */
+
+  /* Soft animated gradient */
+  background: linear-gradient(-45deg, #f8f9fa, #e9f5ff, #dfe9f3, #e3f2fd);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+
   color: #333;
   text-align: center;
+}
+
+/* Animated Background */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Header */
