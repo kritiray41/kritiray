@@ -3,194 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <title>My Personal Website</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
-      color: #333;
-      text-align: center;
-    }
-
-    header {
-      background: linear-gradient(to right, #00f2fe, #4facfe);
-      color: white;
-      padding: 25px 0;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 20px;
-      font-weight: bold;
-      font-size: 1.1em;
-      transition: all 0.3s ease;
-    }
-
-    nav a:hover {
-      border-bottom: 2px solid white;
-    }
-
-    nav a.active {
-      border-bottom: 2px solid white;
-    }
-
-    section {
-      max-width: 850px;
-      margin: 40px auto;
-      padding: 30px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    section:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 20px rgba(0,0,0,0.2);
-    }
-
-    .hero {
-      padding: 60px 20px;
-      background: white;
-      border-radius: 12px;
-      margin: 40px auto;
-      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-    }
-
-    .hero h2 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-      color: #333;
-    }
-
-    .hero p {
-      font-size: 1.2em;
-      margin-bottom: 20px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      background: linear-gradient(to right, #4facfe, #00f2fe);
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background 0.3s ease, transform 0.3s ease;
-    }
-
-    .btn:hover {
-      background: linear-gradient(to right, #00f2fe, #4facfe);
-      transform: translateY(-2px);
-    }
-
-    .profile {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-      border: 4px solid #4facfe;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      margin-bottom: 20px;
-      font-size: 2em;
-      color: #333;
-    }
-
-    .skills-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
-
-    .skill {
-      background: linear-gradient(to right, #4facfe, #00f2fe);
-      color: white;
-      padding: 15px 25px;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 1em;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .skill:hover {
-      transform: scale(1.05);
-    }
-
-    footer {
-      background: #333;
-      color: white;
-      padding: 15px 0;
-      margin-top: 40px;
-      font-size: 0.9em;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul li {
-      margin: 8px 0;
-    }
-
-    a {
-      color: #4facfe;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Animations */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 1s forwards;
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1 class="fade-in">Welcome to My Website</h1>
     <nav>
-      <a href="index.html" class="active">Personal</a>
+      <a href="index.html">Personal</a>
       <a href="academic.html">Academic</a>
       <a href="hobby.html">Hobby</a>
     </nav>
   </header>
+
+  <!-- Hero Section -->
   <section class="hero fade-in">
-    <h2>Hello, I'm <b>KRITI RAY</b></h2>
-    <p>A passionate learner, creative thinker, and aspiring developer.</p>
-    <a href="#about" class="btn">Learn More About Me</a>
+    <div class="hero-content">
+      <h2>Hello, I'm <b>KRITI RAY</b></h2>
+      <p>A passionate learner, creative thinker, and aspiring developer.</p>
+      <a href="#about" class="btn">Learn More About Me</a>
+    </div>
   </section>
-  <section id="about" class="fade-in">
-    <h2>About Me</h2>
-    <p>Hello! I am <b>KRITI RAY</b>, a student passionate about learning and exploring new things.</p>
-    <p>I enjoy working on creative projects, studying technology, and building my future career.</p>
-    <p>I believe in continuous learning and love experimenting with new ideas in programming, design, and innovation.</p>
+
+  <!-- Profile Section -->
+  <section class="container" id="about">
+    <img src="images/me.jpg" alt="My Photo" class="profile slide-up">
+    <div class="slide-left">
+      <h2>About Me</h2>
+      <p>Hello! I am <b>KRITI RAY</b>, a student passionate about learning and exploring new things.</p>
+      <p>I enjoy working on creative projects, studying technology, and building my future career.</p>
+      <p>I believe in continuous learning and love experimenting with new ideas in programming, design, and innovation.</p>
+    </div>
   </section>
+
+  <!-- Skills Section -->
   <section class="skills fade-in">
     <h2>My Skills</h2>
     <div class="skills-grid">
@@ -199,7 +44,9 @@
       <div class="skill">C / C++ Programming</div>
     </div>
   </section>
-  <section class="contact fade-in">
+
+  <!-- Contact Section -->
+  <section class="contact slide-left">
     <h2>Contact Me</h2>
     <p>If you'd like to connect, feel free to email me or reach out via my social media profiles.</p>
     <ul>
@@ -212,5 +59,31 @@
   <footer>
     <p>© 2025 Kriti Ray</p>
   </footer>
+
+  <script>
+  (function(){
+    const links = document.querySelectorAll('nav a');
+    let path = window.location.pathname;
+    let page = path.substring(path.lastIndexOf('/') + 1);
+    if (!page) page = 'index.html'; 
+
+    links.forEach(link => {
+      const href = (link.getAttribute('href') || '').replace('./', '');
+      if (href === page) link.classList.add('active');
+    });
+
+    function revealOnScroll() {
+      const elements = document.querySelectorAll('.fade-in, .slide-up, .slide-left, .slide-right');
+      const windowHeight = window.innerHeight;
+      elements.forEach(el => {
+        const pos = el.getBoundingClientRect().top;
+        if (pos < windowHeight - 50) el.classList.add('show');
+      });
+    }
+
+    window.addEventListener('load', revealOnScroll);
+    window.addEventListener('scroll', revealOnScroll);
+  })();
+  </script>
 </body>
 </html>
