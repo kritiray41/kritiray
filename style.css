@@ -6,6 +6,7 @@ body {
   background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
   color: #333;
   scroll-behavior: smooth;
+  text-align: center; /* Centers all text */
 }
 
 /* ===== Header ===== */
@@ -62,12 +63,47 @@ section.container {
   flex-direction: column;
   align-items: center;
   animation: fadeInUp 1s ease;
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
 
+/* Center all section headings */
 section.container h2 {
   margin-bottom: 20px;
   font-size: 2em;
   color: #333;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  padding: 60px 20px;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #4facfe;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #00f2fe;
 }
 
 /* ===== Cards ===== */
@@ -103,11 +139,27 @@ img.profile:hover {
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
+/* ===== Skills Grid ===== */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skill {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
 /* ===== Lists ===== */
 ul {
   list-style: none;
   padding: 0;
-  text-align: left;
+  text-align: center;
   max-width: 700px;
   margin: auto;
 }
